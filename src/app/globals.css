@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f5;
+  --foreground: #0f2920;
+  --emerald-950: #0d2818;
+  --emerald-900: #1b3d2f;
+  --emerald-800: #2a5240;
+  --beige-50: #faf8f5;
+  --beige-100: #f5ede4;
+  --beige-200: #e8ddd0;
+  --gold-400: #d4af37;
+  --gold-500: #c9a962;
+  --gold-600: #b8943f;
+  --gold-700: #9a7b32;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-emerald-950: var(--emerald-950);
+  --color-emerald-900: var(--emerald-900);
+  --color-emerald-800: var(--emerald-800);
+  --color-beige-50: var(--beige-50);
+  --color-beige-100: var(--beige-100);
+  --color-beige-200: var(--beige-200);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.prose-emerald h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--emerald-950);
+  margin-top: 2rem;
+}
+
+.prose-emerald p {
+  margin-top: 1rem;
+  line-height: 1.75;
+  color: rgba(15, 41, 32, 0.85);
+}
+
+.prose-emerald ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose-emerald li {
+  margin-top: 0.5rem;
+}
+
+.pb-safe {
+  padding-bottom: max(5rem, env(safe-area-inset-bottom));
+}
